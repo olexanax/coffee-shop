@@ -36,6 +36,9 @@ const Div = styled.div`
         gap:30px;
         li{
             list-style-type: none;
+            &:hover{
+                font-weight: 800;
+            }
         }
     }
     footer{

@@ -3,7 +3,7 @@ import styled from "styled-components";
 const Wrapp = styled.div`
     background:url(${props => props.backgroundKey}) no-repeat;
     color:white;
-    padding: 130px 0 200px 0;
+    padding: 130px 0 50px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -27,8 +27,11 @@ const Wrapp = styled.div`
         height: 30px;
         border: 1px solid white;
         border-radius: 5px;
-        background: rgba(0, 255, 0, 0);
+        background: rgba(255,255,255,0);
         color: white;
+        &:hover{
+            background: rgba(255,255,255,0.2);
+        }
     }
 `;
 

@@ -11,16 +11,24 @@ const Wrapp = styled.div`
     border-radius: 8px;;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-end;
     padding-top: 22px ;
+    &:hover{
+        outline: 3px solid grey;
+    }
     img{
         height: 130px;
         width: 150px;
+        align-self: center;
+    }
+    p{
+        margin-right: 20px;
     }
     p:last-child{
         font-weight: 700;
         align-self: flex-end;
-        margin-right: 20px;
+    }
+    p:nth-child(3){
     }
 `;
 

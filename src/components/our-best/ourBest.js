@@ -20,8 +20,7 @@ const OurBest  = () => {
             default: 
                     return item = <Card name={item.name} price={item.price} photo='add photo please' key={nextId()}/>
         }
-           
-        // return item = <Card name={item.name} price={item.price} photo={item.photo}/>
+        
     })
     return(
         <Wrapp numberORraws={Math.ceil(result.length/3)}>
