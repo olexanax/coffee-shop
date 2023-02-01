@@ -15,7 +15,7 @@ function App() {
           <Route index element={<CoffeHouse />} />
           <Route path="OurCoffee" element={<OurCoffee />} />
           <Route path="ForYourPleasure" element={<ForYourPleasure />} />
-          <Route path="AboutItem" element={<AboutItem />} />
+          <Route path="AboutItem/:id" element={<AboutItem />} />
         </Route>
       </Routes>
     </BrowserRouter>

@@ -19,25 +19,17 @@ const TitleBlock  = ({title, subTitle, quetion, backgroundKey}) => {
         default:
             test = background1
     }
-    let Result = ()=>{
-        if(+backgroundKey === 1){
-            return(
-                <>
-                <h1>{title}</h1>
-                <p>{subTitle}</p>
-                <p>{quetion}</p>
-                <img src={beansLogo} alt="" />
-                <button>More</button>
-                </>
-            )
-        }
-        return(
-            <h1>{title}</h1>
-        )
-    }
     return(
         <Wrapp backgroundKey={test}>
-            <Result/>
+            <h1>{title}</h1>
+            {+backgroundKey === 1 &&
+                <> 
+                    <p>{subTitle}</p>
+                    <p>{quetion}</p>
+                    <img src={beansLogo} alt="" />
+                    <button>More</button>
+                </>
+            }
         </Wrapp>
     )
 }

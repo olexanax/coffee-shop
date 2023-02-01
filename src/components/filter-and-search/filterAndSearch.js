@@ -8,8 +8,6 @@ class FilterAndSearch extends Component{
         
         }
     }
-
-
     render(){
         return(
             <Wrapper>

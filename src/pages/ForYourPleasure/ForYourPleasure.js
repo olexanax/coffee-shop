@@ -5,15 +5,16 @@ import cupOfCoffee from '../../img/cupOfCoffee.jpg'
 import aromisticoCoffee from '../../img/goodsPhotos/aromisticoCoffee.png'
 import Card from "../../components/card/card";
 import data from "../../data";
-import nextId from "react-id-generator";
+
 
 const ForYourPleasure = () => {
-    const arr = data.all.map(item=>{
+    const arr = data.goods.filter(item=>!item.best).map((item, i)=>{
         return item = <Card name={item.name}
                             price={item.price} 
                             photo={aromisticoCoffee} 
                             country = {item.country}
-                            key={nextId()}/>
+                            key={item.key}
+                            id={item.key}/>
     })
     return(
         <Wrapper>
