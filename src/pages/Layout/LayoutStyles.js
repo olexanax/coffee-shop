@@ -1,9 +1,7 @@
 import styled from 'styled-components'
-// import beans from '../../img/coffee-beans.svg'
-import beansLogo from '../../img/beans-logo.svg'
 
 
-const Div = styled.div`
+const Wrapper = styled.div`
     font-family: 'Merienda', cursive;
     font-size:12px;
     display:flex;
@@ -20,12 +18,6 @@ const Div = styled.div`
         nav{
             background: rgba(0,1,0,0);
         }
-        /* nav:before{
-            content: '';
-            background-image: url();
-                position:relative;
-                z-index: 2;
-        } */
     }
     a{
         text-decoration: none;
@@ -59,9 +51,6 @@ const Div = styled.div`
             height: 30px;
         }
     }
-
-
-    
 `;
 
-export {Div}
+export default Wrapper

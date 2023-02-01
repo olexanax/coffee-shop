@@ -1,6 +1,6 @@
-import Wrapp from "./titleAndTextStyles";
-import beansLogo from '../../img/beans-logo.svg'
+import Wrapp from "./styles";
 
+import beansLogo from '../../img/beans-logo.svg'
 
 
 const TitleAndText  = ({title, fistParagraph, secondParagraph, price}) => {
@@ -14,4 +14,5 @@ const TitleAndText  = ({title, fistParagraph, secondParagraph, price}) => {
         </Wrapp>
     )
 }
+
 export default TitleAndText

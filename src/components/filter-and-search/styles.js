@@ -30,6 +30,11 @@ const Wrapper = styled.div`
             background-color: #fff;
             box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
             border-radius: 4px;
+            font-family: Merienda;
+        }
+        .activeButton{
+            background-color: #000;
+            color:#fff;
         }
     }
 `

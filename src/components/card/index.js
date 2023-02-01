@@ -1,17 +1,19 @@
-import Wrapp from "./cardStyle";
 import { Link } from "react-router-dom";
+
+import Wrapper from "./styles";
 
 
 const Card  = ({name, price, photo, country, id}) => {
     return(
         <Link to={`/AboutItem/${id}`}>
-            <Wrapp>
+            <Wrapper>
                 <img src={photo} alt="" />
                 <p>{name}</p>
                 {country && <p>{country}</p>}
                 <p>{price}$</p>
-            </Wrapp>
+            </Wrapper>
         </Link>
     )
 }
+
 export default Card

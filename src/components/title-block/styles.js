@@ -1,5 +1,6 @@
 import styled from "styled-components";
 
+
 const Wrapp = styled.div`
     background:url(${props => props.backgroundKey}) no-repeat;
     color:white;

@@ -1,9 +1,11 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import Layout from "./pages/Layout/Layout";
 import CoffeHouse from "./pages/CoffeeHouse/CoffeeHouse";
 import ForYourPleasure from "./pages/ForYourPleasure/ForYourPleasure";
 import OurCoffee from "./pages/OurCoffee/OurCoffee";
 import AboutItem from "./pages/AboutItem/AboutItem";
-import Layout from "./pages/Layout/Layout";
+
 import './App.css';
 
 

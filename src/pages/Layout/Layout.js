@@ -1,10 +1,13 @@
 import { Outlet, Link } from "react-router-dom";
-import {Div} from "./LayoutStyles";
+
+import Wrapper from "./LayoutStyles";
+
 import logo from '../../img/beans-logo.svg'
+
 
 const Layout = () => {
   return (
-      <Div>
+      <Wrapper>
         <header>
           <nav>
             <ul>
@@ -37,7 +40,7 @@ const Layout = () => {
           </nav>    
           <img src={logo} alt=''/>
         </footer>
-      </Div>
+      </Wrapper>
   )
 };
 

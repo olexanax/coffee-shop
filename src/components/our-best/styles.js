@@ -2,8 +2,7 @@ import styled from "styled-components";
 import paperBG from '../../img/backgrounds/paperBG.jpg'
 
 
-
-const Wrapp = styled.div`
+const Wrapper = styled.div`
     height: ${props => 595 + ((props.numberORraws -1) * 360)}px;
     background-image: url(${paperBG});
     padding: 0 20%;
@@ -16,6 +15,7 @@ const Wrapp = styled.div`
         margin-top: 80px ;
     }
 `;
+
 const CardConteiner = styled.div`
         display: flex;
         justify-content: center;
@@ -23,5 +23,5 @@ const CardConteiner = styled.div`
         flex-wrap: wrap;
 `
 
-export default Wrapp
+export default Wrapper
 export{CardConteiner}

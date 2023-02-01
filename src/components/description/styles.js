@@ -23,8 +23,6 @@ const Wrapper = styled.div`
             text-align: left;
         }
     }
-
-
 `
 
 export default Wrapper

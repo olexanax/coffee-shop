@@ -1,5 +1,6 @@
-import Wrapper from "./descriptionStyles";
-import TitleAndText from "../title-and-text/titleAndText";
+import TitleAndText from "../title-and-text";
+
+import Wrapper from "./styles";
 
 
 const Description = ({photo, title, fistParagraph, secondParagraph, price}) => {

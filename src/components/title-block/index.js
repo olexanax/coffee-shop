@@ -1,10 +1,9 @@
-import Wrapp from "./titleBlockStyles";
-import beansLogo from '../../img/white-beans-logo.svg'
+import Wrapp from "./styles";
 
+import beansLogo from '../../img/white-beans-logo.svg'
 import background1 from "../../img/backgrounds/background1.jpg"
 import background2 from "../../img/backgrounds/background2.jpg"
 import background3 from "../../img/backgrounds/background3.jpg"
-
 
 
 const TitleBlock  = ({title, subTitle, quetion, backgroundKey}) => {
@@ -32,6 +31,7 @@ const TitleBlock  = ({title, subTitle, quetion, backgroundKey}) => {
             }
         </Wrapp>
     )
-}
+};
+
 export default TitleBlock
 

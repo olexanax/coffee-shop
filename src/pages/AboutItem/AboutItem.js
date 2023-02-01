@@ -1,10 +1,13 @@
 import { useEffect, useState } from "react";
 import { useParams} from "react-router-dom";
-import TitleBlock from "../../components/title-block/titleBlock";
+
+import TitleBlock from "../../components/title-block/index";
 import data from "../../data";
-import Description from "../../components/description/description";
-import coffeeCity from '../../img/coffeeCity.jpg'
+import Description from "../../components/description/index";
+
 import Wrapper from "./AboutItemStyles";
+
+import stub from '../../img/coffeeCity.jpg'
 
 
 const AboutItem = () => {
@@ -26,7 +29,7 @@ const AboutItem = () => {
                          fistParagraph={`Country: ${item?.country}`}
                          secondParagraph='Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.' 
                          price={item?.price}
-                         photo= {coffeeCity}/>
+                         photo={item?.photo || stub}/>
         </Wrapper>
     )
 };

@@ -1,17 +1,19 @@
-import Wrapper from "./ForYourPlesureStyles";
-import TitleBlock from "../../components/title-block/titleBlock";
-import Description from "../../components/description/description";
-import cupOfCoffee from '../../img/cupOfCoffee.jpg'
-import aromisticoCoffee from '../../img/goodsPhotos/aromisticoCoffee.png'
-import Card from "../../components/card/card";
 import data from "../../data";
+import TitleBlock from "../../components/title-block/index";
+import Description from "../../components/description/index";
+import Card from "../../components/card/index";
+
+import Wrapper from "./ForYourPlesureStyles";
+
+import cupOfCoffee from '../../img/cupOfCoffee.jpg'
+import stub from '../../img/coffeeCity.jpg'
 
 
 const ForYourPleasure = () => {
     const arr = data.goods.filter(item=>!item.best).map((item, i)=>{
         return item = <Card name={item.name}
                             price={item.price} 
-                            photo={aromisticoCoffee} 
+                            photo={item.photo||stub} 
                             country = {item.country}
                             key={item.key}
                             id={item.key}/>

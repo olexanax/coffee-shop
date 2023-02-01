@@ -1,9 +1,7 @@
 import styled from "styled-components";
 
 
-
-
-const Wrapp = styled.div`
+const Wrapper = styled.div`
     height: 240px;
     width: 220px;
     background-color: rgba(255, 255, 255, 0.65);
@@ -32,4 +30,4 @@ const Wrapp = styled.div`
     }
 `;
 
-export default Wrapp
+export default Wrapper

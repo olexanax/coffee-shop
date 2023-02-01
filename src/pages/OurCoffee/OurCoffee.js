@@ -1,35 +1,65 @@
 import { Component } from "react";
-import TitleBlock from "../../components/title-block/titleBlock";
-import FilterAndSearch from "../../components/filter-and-search/filterAndSearch";
-import Card from "../../components/card/card";
+
 import data from "../../data";
-import aromisticoCoffee from '../../img/goodsPhotos/aromisticoCoffee.png'
-import girlWithCoffee from '../../img/girl.jpg'
-import Description from "../../components/description/description";
+import TitleBlock from "../../components/title-block/index";
+import FilterAndSearch from "../../components/filter-and-search/index";
+import Card from "../../components/card/index";
+import Description from "../../components/description/index";
+
 import Wrapper from "./OurCoffeeStyles";
 
+import girlWithCoffee from '../../img/girl.jpg'
+import stub from '../../img/coffeeCity.jpg'
 
 
 class OurCoffe extends Component{
     constructor(props){
         super(props)
         this.state = {
-            search:'test'
+            search:'',
+            filter:''
         }
     }
 
+    onFilter = (filter, data) => {
+        switch(filter){
+            case 'Brazil':
+               return data.filter(item => item.country === 'Brazil')
+            case 'Kenya':
+                return data.filter(item => item.country === 'Kenya')
+            case 'Columbia':
+                return data.filter(item => item.country === 'Columbia')
+            default: 
+                return data;
+        }
+    }
+
+    onChangeFilter = (value) => {
+        this.setState(()=>({
+            filter: value
+        }))
+    }
+
     onSearch = (search, data) => {
+        console.log(search)
         if(search === ''){
             return data
         }
         return data.filter(item => item.name.indexOf(search) !== -1)
     }
+    
+    onChangeSearch = (value) => {
+        this.setState(()=>({
+            search: value
+        }))
+    }
 
     render(){
-        const arr = this.onSearch(this.state.search, data.goods.filter(item=>!item.best)).map((item, i)=>{
+        const {filter, search} = this.state
+        const arr = this.onSearch(search, this.onFilter(filter, data.goods.filter(item=>!item.best))).map((item, i)=>{
             return item = <Card name={item.name}
                                 price={item.price} 
-                                photo={aromisticoCoffee} 
+                                photo={item.photo||stub} 
                                 country = {item.country}
                                 key={item.key}
                                 id= {item.key}/>
@@ -45,7 +75,7 @@ class OurCoffe extends Component{
                              met spot shy want. Children me laughing we prospect answered followed. At it went
                              is song that held help face.' 
                              photo= {girlWithCoffee}/>
-                <FilterAndSearch/>
+                <FilterAndSearch onChangeSearch = {this.onChangeSearch} onChangeFilter = {this.onChangeFilter}/>
                 <div className="conteiner">{arr}</div>
             </Wrapper>
         )

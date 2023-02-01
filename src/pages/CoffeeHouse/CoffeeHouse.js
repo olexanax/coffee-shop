@@ -1,6 +1,6 @@
-import TitleBlock from "../../components/title-block/titleBlock";
-import TitleAndText from "../../components/title-and-text/titleAndText";
-import OurBest from "../../components/our-best/ourBest";
+import TitleBlock from "../../components/title-block/index";
+import TitleAndText from "../../components/title-and-text/index";
+import OurBest from "../../components/our-best/index";
 
 import Wrapper from "./CoffeeHouseStyles";
 
