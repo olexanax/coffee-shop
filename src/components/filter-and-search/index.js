@@ -15,17 +15,10 @@ class FilterAndSearch extends Component{
         }
     }
     onChangeSearch = (e) => {
-        // this.setState(()=>({
-        //     search: e.target.value
-        // }))
-        // this.props.onChangeSearch(this.state.search)
-        new Promise((resolve) => {
-            this.setState(()=>({
-                search: e.target.value
-            }))
-            resolve()
-        })
-        .then(()=>this.props.onChangeSearch(this.state.search))
+        this.setState(()=>({
+            search: e.target.value
+        }))
+        this.props.onChangeSearch(e.target.value)
     }
     onChangeFilter = (e,active) => {
         new Promise((resolve) => {
@@ -56,7 +49,7 @@ class FilterAndSearch extends Component{
         return(
             <Wrapper>
                 <div>
-                    <label htmlFor="">
+                    <label>
                         Lookiing for
                         <input onChange={this.onChangeSearch}
                                type="text" 

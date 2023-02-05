@@ -41,7 +41,6 @@ class OurCoffe extends Component{
     }
 
     onSearch = (search, data) => {
-        console.log(search)
         if(search === ''){
             return data
         }
